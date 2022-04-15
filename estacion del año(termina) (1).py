@@ -6,7 +6,6 @@ mes = input("En que mes estás?: ")
 a1 = hem.upper()
 a2 = mes.lower()
 
-trimestres = {}
 
 if (a1 == "S"):
     trimestres = {
