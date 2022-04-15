@@ -6,21 +6,37 @@ mes = input("En que mes estás?: ")
 a1 = hem.upper()
 a2 = mes.lower()
 
-trimestres = {
-  1 : ["enero", "febrero", "diciembre"],
-  2 : ["marzo", "abril", "mayo",],
-  3 : ["junio", "julio", "agosto"],
-  4 : ["septiembre","octubre","noviembre"]
-  }
+trimestres = {}
 
-
-#hemisferio sur.
 if (a1 == "S"):
-  trimestres["verano"] = trimestres.pop[1]
+    trimestres = {
+    "verano" : ["diciembre", "enero", "febrero"],
+    "otoño" : ["marzo", "abril", "mayo",],
+    "invierno" : ["junio", "julio", "agosto"],
+    "primavera" : ["septiembre","octubre","noviembre"]
+    }
 
-  print (trimestres)
-  #  for i in trimestreS.values():
-  #    print(trimestreS.values())
-  #    if trimestreS.values() == mes:
-  #      print("La estacion en el mes de", mes, "es: ", trimestreS.values())
-  #  
+    
+
+if (a1 == "N"):
+    trimestres = {
+    "invierno" : [ "diciembre", "enero", "febrero",],
+    "primavera" : ["marzo", "abril", "mayo",],
+    "verano" : ["junio", "julio", "agosto"],
+    "otoño" : ["septiembre","octubre","noviembre"]
+    }
+
+
+estaciones = []
+for i, j in trimestres.items():
+  
+  estaciones.append(i)
+  meses = list(j)
+
+  if mes in meses:
+    for a in estaciones:
+        sumat = len(estaciones) - 1
+        print("La estacion en el mes de", mes, "es:", estaciones[sumat])
+        print(" ")
+        break
+        
